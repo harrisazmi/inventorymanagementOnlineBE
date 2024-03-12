@@ -1,4 +1,4 @@
-# Inventory Management System Backend
+# Inventory Management System Backend (Full Guide)
 
 ---
 
