@@ -54,8 +54,23 @@ This repository contains the backend code for an Inventory Management System. It
     npm run dev
     ````
 
-6.  Dockerization
-    Dockerfile is prepared upfront so feel free to use it to build your image later on. Tweak as needed.
+## Using Docker
+
+You can also run the backend using Docker. Follow these steps:
+
+1. Build the Docker image:
+
+   ```bash
+   docker build -t inventory-backend .
+   ```
+
+2. Run the Docker container:
+
+   ```bash
+   docker run -p 3133:3133 -d inventory-backend
+   ```
+
+This will start the backend server inside a Docker container, exposing port 3133 on your host machine.
 
 ## API Endpoints
 
