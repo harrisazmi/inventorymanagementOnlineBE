@@ -41,18 +41,18 @@ This repository contains the backend code for an Inventory Management System. It
 5.  (Good Alternative for live server)
     Nodemon is available for local hosting, so change them in package.json for only the dev part
 
-        ```bash
+    ```bash
 
     "scripts" : {
     "dev": "nodemon index.js"
     }
+    ```
 
-    ````
     Then can Start the server.
 
-      ```bash
+    ```bash
     npm run dev
-    ````
+    ```
 
 ## Using Docker
 
