@@ -92,12 +92,66 @@ This will start the backend server inside a Docker container, exposing port 3133
 - **Inventory**: Represents an inventory item with properties such as item name, quantity, and supplier.
 - **Supplier**: Represents a supplier with properties like name, address, and contact information.
 
+## More Targeted Details on API Endpoints
+
+### Get all inventory items
+
+- **URL:** `/api/inventory`
+- **Method:** `GET`
+- **Query Parameters:**
+  - `sortBy`: Sort field (default: `itemName`)
+  - `sortOrder`: Sort order (default: `asc`)
+  - `itemName`: Filter by item name (optional)
+- **Response:** Returns an array of inventory items and the total count.
+
+### Get a specific inventory item
+
+- **URL:** `/api/inventory/:id`
+- **Method:** `GET`
+- **Parameters:** `id` (Inventory item ID)
+- **Response:** Returns the details of the specified inventory item.
+
+### Add a new inventory item
+
+- **URL:** `/api/inventory`
+- **Method:** `POST`
+- **Body:** JSON object containing `itemName`, `quantity`, and `supplierId`.
+- **Response:** Returns the newly added inventory item.
+
+### Update an inventory item
+
+- **URL:** `/api/inventory/:id`
+- **Method:** `PUT`
+- **Parameters:** `id` (Inventory item ID)
+- **Body:** JSON object containing updated `itemName`, `quantity`, and `supplierId`.
+- **Response:** Returns the updated inventory item.
+
+### Delete an inventory item
+
+- **URL:** `/api/inventory/:id`
+- **Method:** `DELETE`
+- **Parameters:** `id` (Inventory item ID)
+- **Response:** Returns a success message upon successful deletion.
+
+### Populate the database with sample data
+
+- **URL:** `/api/populate-database`
+- **Method:** `POST`
+- **Response:** Populates the database with sample data. (Note: Implementation of this endpoint is pending.)
+
+### Remove all data from the database
+
+- **URL:** `/api/remove-all-data`
+- **Method:** `POST`
+- **Response:** Removes all data from the database.
+
 ## Dependencies
 
 - **Express**: Web framework for Node.js.
 - **Mongoose**: MongoDB object modeling tool.
 - **Cors**: Middleware for enabling CORS (Cross-Origin Resource Sharing).
 - **Dotenv**: Module for loading environment variables from a .env file.
+- **Nodemon**: Alternative for a live server
 
 ## Contributing
 
