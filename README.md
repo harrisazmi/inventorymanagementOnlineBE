@@ -38,7 +38,8 @@ This repository contains the backend code for an Inventory Management System. It
     npm run dev
     ```
 
-5.  Nodemon is available for local hosting, so change them in package.json for only the dev part
+5.  (Good Alternative for live server)
+    Nodemon is available for local hosting, so change them in package.json for only the dev part
 
         ```bash
 
@@ -52,6 +53,9 @@ This repository contains the backend code for an Inventory Management System. It
       ```bash
     npm run dev
     ````
+
+6.  Dockerization
+    Dockerfile is prepared upfront so feel free to use it to build your image later on. Tweak as needed.
 
 ## API Endpoints
 
